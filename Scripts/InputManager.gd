@@ -20,11 +20,11 @@ func _input(event: InputEvent) -> void:
 			emit_signal("left_mouse_button_released")
 	
 	# Change camera with button
-	if Input.is_action_just_pressed("camera_front_view"):
+	if Input.is_action_just_pressed("up") or Input.is_action_just_pressed("scroll_up"):
 		camera_manager.is_front_view = true
 		camera_manager.toggle_camera()
 	
-	if Input.is_action_just_pressed("camera_top_view"):
+	if Input.is_action_just_pressed("down") or Input.is_action_just_pressed("scroll_down"):
 		camera_manager.is_front_view = false
 		camera_manager.toggle_camera()
 
