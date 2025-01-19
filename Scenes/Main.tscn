@@ -1,9 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cw4gfeh6a6q"]
+[gd_scene load_steps=18 format=3 uid="uid://cw4gfeh6a6q"]
 
+[ext_resource type="Script" path="res://Scripts/CameraManager.gd" id="1_aqvv5"]
 [ext_resource type="Script" path="res://Scripts/CardManager.gd" id="1_ys0e3"]
+[ext_resource type="Texture2D" uid="uid://20ca42wlatc3" path="res://Assets/top_view_table.jpg" id="2_17vd7"]
 [ext_resource type="Script" path="res://Scripts/MagicCardSlot.gd" id="3_hobpp"]
+[ext_resource type="Texture2D" uid="uid://dhk4i3rlq307f" path="res://Assets/cenario_1.png" id="3_ingqh"]
 [ext_resource type="PackedScene" uid="uid://dewe1dk4fgioe" path="res://Scenes/CardSlot.tscn" id="3_rvt3v"]
 [ext_resource type="Script" path="res://Scripts/PlayerHand.gd" id="3_xkca7"]
+[ext_resource type="Texture2D" uid="uid://yougp415h2wo" path="res://Assets/CardImages/Sualk.png" id="4_2nvfv"]
 [ext_resource type="Texture2D" uid="uid://bdfpqf1xtchvl" path="res://Assets/CardLayout/card_back_brown.png" id="4_kfsf3"]
 [ext_resource type="PackedScene" uid="uid://dcdo0hrqm40go" path="res://Scenes/EnemyCardSlot.tscn" id="4_mrlei"]
 [ext_resource type="Script" path="res://Scripts/Deck.gd" id="4_trx7t"]
@@ -17,6 +21,28 @@
 size = Vector2(1413.33, 2006.67)
 
 [node name="Main" type="Node2D"]
+
+[node name="CameraManager" type="Node2D" parent="."]
+script = ExtResource("1_aqvv5")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TopDown" type="Sprite2D" parent="Background"]
+z_index = -4
+position = Vector2(643.25, 354)
+scale = Vector2(3.50817, 5.31387)
+texture = ExtResource("2_17vd7")
+
+[node name="FrontView" type="Sprite2D" parent="Background"]
+z_index = -5
+position = Vector2(642.506, 349.5)
+scale = Vector2(0.338681, 0.309583)
+texture = ExtResource("3_ingqh")
+
+[node name="Sualk" type="Sprite2D" parent="Background/FrontView"]
+position = Vector2(137.28, -259.22)
+scale = Vector2(0.383496, 0.401403)
+texture = ExtResource("4_2nvfv")
 
 [node name="CardManager" type="Node2D" parent="."]
 script = ExtResource("1_ys0e3")
@@ -163,20 +189,20 @@ text = "End Turn"
 
 [node name="EnemyDeck" type="Node2D" parent="."]
 position = Vector2(1200, 100)
+scale = Vector2(0.07, 0.07)
 script = ExtResource("10_2wbwq")
 
 [node name="DeckImage" type="Sprite2D" parent="EnemyDeck"]
 z_index = -2
-scale = Vector2(0.07, 0.07)
 texture = ExtResource("7_tiau1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="EnemyDeck"]
 z_index = -2
-offset_left = -7.0
-offset_top = -19.0
-offset_right = 66.0
-offset_bottom = 61.0
-theme_override_font_sizes/normal_font_size = 27
+offset_left = -57.143
+offset_top = -228.571
+offset_right = 335.857
+offset_bottom = 261.429
+theme_override_font_sizes/normal_font_size = 300
 text = "0"
 
 [node name="BattleManager" type="Node" parent="."]

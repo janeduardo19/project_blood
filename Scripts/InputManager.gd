@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var card_manager: Node2D = $"../CardManager"
 @onready var deck: Node2D = $"../Deck"
+@onready var camera_manager: Node2D = $"../CameraManager"
 
 
 signal  left_mouse_button_clicked
@@ -17,6 +18,15 @@ func _input(event: InputEvent) -> void:
 			raycast_at_cursor()
 		else:
 			emit_signal("left_mouse_button_released")
+	
+	# Change camera with button
+	if Input.is_action_just_pressed("camera_front_view"):
+		camera_manager.is_front_view = true
+		camera_manager.toggle_camera()
+	
+	if Input.is_action_just_pressed("camera_top_view"):
+		camera_manager.is_front_view = false
+		camera_manager.toggle_camera()
 
 func raycast_at_cursor():
 	var space_state = get_world_2d().direct_space_state
