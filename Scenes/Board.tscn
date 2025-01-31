@@ -29,14 +29,14 @@ script = ExtResource("1_aqvv5")
 
 [node name="TopDown" type="Sprite2D" parent="Background"]
 z_index = -4
-position = Vector2(643.25, 354)
-scale = Vector2(3.50817, 5.31387)
+position = Vector2(643.25, 358)
+scale = Vector2(3.50817, 5.37226)
 texture = ExtResource("2_17vd7")
 
 [node name="FrontView" type="Sprite2D" parent="Background"]
 z_index = -5
-position = Vector2(642.506, 349.5)
-scale = Vector2(0.338681, 0.309583)
+position = Vector2(642.506, 358.5)
+scale = Vector2(0.338681, 0.30875)
 texture = ExtResource("3_ingqh")
 
 [node name="Sualk" type="Sprite2D" parent="Background/FrontView"]

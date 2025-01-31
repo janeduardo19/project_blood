@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://xfld27khal7f"]
+[gd_scene load_steps=5 format=3 uid="uid://xfld27khal7f"]
+
+[ext_resource type="PackedScene" uid="uid://depeawyh037yr" path="res://Scenes/Map1.tscn" id="1_0ff83"]
+[ext_resource type="PackedScene" uid="uid://c10xkh2p0do28" path="res://Scenes/Map2.tscn" id="2_2ype5"]
+[ext_resource type="PackedScene" uid="uid://bxhf6tralnjo2" path="res://Scenes/Map3.tscn" id="3_ue7vs"]
+[ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Scenes/Player.tscn" id="4_0o8vw"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Map1" parent="." instance=ExtResource("1_0ff83")]
+
+[node name="Map2" parent="." instance=ExtResource("2_2ype5")]
+position = Vector2(4110, 88)
+
+[node name="Map3" parent="." instance=ExtResource("3_ue7vs")]
+position = Vector2(-4460, 9)
+
+[node name="Player" parent="." instance=ExtResource("4_0o8vw")]
