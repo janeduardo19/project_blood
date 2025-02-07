@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://bghjl2bka8hn0"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_fgpl7"]
+[ext_resource type="Texture2D" uid="uid://dgfgoqdkujrh1" path="res://Assets/CardImages/Erika.png" id="2_xnq0x"]
+
+[sub_resource type="Animation" id="Animation_833j0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3ou1w"]
+resource_name = "walk"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.139626, -0.139626]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dwpby"]
+_data = {
+"RESET": SubResource("Animation_833j0"),
+"walk": SubResource("Animation_3ou1w")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kiot"]
+size = Vector2(257, 315)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.4, 0.4)
+collision_mask = 5
+script = ExtResource("1_fgpl7")
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(-3.72335, 26.493)
+scale = Vector2(0.147217, 0.156778)
+texture = ExtResource("2_xnq0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dwpby")
+}
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(10.5, 3.5)
+shape = SubResource("RectangleShape2D_8kiot")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+limit_left = -100000
+limit_top = -100000
+limit_smoothed = true
+position_smoothing_speed = 3.0
