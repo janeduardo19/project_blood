@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="project_call"
-run/main_scene="res://Scenes/Board.tscn"
+run/main_scene="res://World/Board.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [autoload]
 
-NavigationManager="*res://Scripts/Global/NavigationManager.gd"
+Global="*res://Scripts/Global.gd"
 
 [display]
 

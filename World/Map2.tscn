@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c10xkh2p0do28"]
+[gd_scene load_steps=9 format=3 uid="uid://c10xkh2p0do28"]
 
-[ext_resource type="Texture2D" uid="uid://bet221e1w5emw" path="res://Assets/Backgrounds/cenario_4.png" id="1_h7sjq"]
+[ext_resource type="Texture2D" uid="uid://bet221e1w5emw" path="res://Assets/Backgrounds/cenario_4.png" id="1_okreo"]
+[ext_resource type="Script" path="res://Scripts/Maps.gd" id="1_r7hrg"]
+[ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="2_nikih"]
+[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_8wbcg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amrst"]
 size = Vector2(309, 2184)
@@ -15,9 +18,10 @@ size = Vector2(276, 2202)
 size = Vector2(3860, 261.5)
 
 [node name="Map2" type="Node2D"]
+script = ExtResource("1_r7hrg")
 
 [node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("1_h7sjq")
+texture = ExtResource("1_okreo")
 centered = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -37,3 +41,12 @@ shape = SubResource("RectangleShape2D_k4kbg")
 [node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1916, 2291.75)
 shape = SubResource("RectangleShape2D_wur57")
+
+[node name="Map1" parent="." instance=ExtResource("3_8wbcg")]
+position = Vector2(106, 1034)
+
+[node name="Player" parent="." instance=ExtResource("2_nikih")]
+position = Vector2(1895, 1102)
+
+[node name="Map1Pos" type="Marker2D" parent="."]
+position = Vector2(266, 1042)

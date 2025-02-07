@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bghjl2bka8hn0"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4jypl"]
-[ext_resource type="Texture2D" uid="uid://dgfgoqdkujrh1" path="res://Assets/CardImages/Erika.png" id="2_ru5x7"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_fgpl7"]
+[ext_resource type="Texture2D" uid="uid://dgfgoqdkujrh1" path="res://Assets/CardImages/Erika.png" id="2_xnq0x"]
 
 [sub_resource type="Animation" id="Animation_833j0"]
 length = 0.001
@@ -45,12 +45,14 @@ _data = {
 size = Vector2(257, 315)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_4jypl")
+scale = Vector2(0.4, 0.4)
+collision_mask = 5
+script = ExtResource("1_fgpl7")
 
 [node name="Image" type="Sprite2D" parent="."]
 position = Vector2(-3.72335, 26.493)
 scale = Vector2(0.147217, 0.156778)
-texture = ExtResource("2_ru5x7")
+texture = ExtResource("2_xnq0x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -63,11 +65,8 @@ position = Vector2(10.5, 3.5)
 shape = SubResource("RectangleShape2D_8kiot")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.7, 0.7)
-limit_left = 0
-limit_top = 0
-limit_right = 3508
-limit_bottom = 2480
+zoom = Vector2(0.5, 0.5)
+limit_left = -100000
+limit_top = -100000
 limit_smoothed = true
-position_smoothing_enabled = true
 position_smoothing_speed = 3.0
