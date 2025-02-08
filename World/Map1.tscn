@@ -51,8 +51,8 @@ position = Vector2(3409, 1365)
 z_index = 1
 position = Vector2(1640, 1208)
 
-[node name="Map3Pos" type="Marker2D" parent="."]
-position = Vector2(277, 1361)
-
 [node name="Map2Pos" type="Marker2D" parent="."]
 position = Vector2(3235, 1366)
+
+[node name="Map3Pos" type="Marker2D" parent="."]
+position = Vector2(277, 1361)
