@@ -5,11 +5,21 @@ class_name Player
 
 @onready var camera_2d: Camera2D = $Camera2D
 
+
 const SPEED = 400.0
 
 func _ready():
 	camera_2d.make_current()
-	setup_camera_limits() 
+	setup_camera_limits()
+	
+	var ozzy_reputation = str(Dialogic.VAR.OzzyRep)
+	$Label.text = "Reputação com o Ozzy: " + ozzy_reputation
+
+
+func _process(delta: float) -> void:
+	var ozzy_reputation = str(Dialogic.VAR.OzzyRep)
+	$Label.text = "Reputação com o Ozzy: " + ozzy_reputation
+
 
 func _physics_process(delta: float) -> void:
 	var velocity = Vector2.ZERO  # Vetor de movimento do jogador
