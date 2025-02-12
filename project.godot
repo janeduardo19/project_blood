@@ -30,12 +30,15 @@ directories/dtl_directory={
 "Introduction": "res://Timelines/Introduction.dtl",
 "OzzyPresentation": "res://Timelines/OzzyPresentation.dtl",
 "ShadePresentation": "res://Timelines/ShadePresentation.dtl",
-"StartCardGame": "res://Timelines/StartCardGame.dtl"
+"StartCardGame": "res://Timelines/StartCardGame.dtl",
+"TesteVoz": "res://Timelines/TesteVoz.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"OzzyRep": 0.0
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -56,6 +59,7 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/glossary_files=["res://Glossaries/Glossary.tres"]
 
 [display]
 

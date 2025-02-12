@@ -1,2 +1,11 @@
 join Ozzy left
-Ozzy: Eae, sou o Ozzy
+if {OzzyRep} == 0:
+	Ozzy: Eae, sou o Ozzy. Quem é você?
+	Ozzy: Não tenho ideia do porque você ta aqui, não precisamos de você. Mas se quiser entrar pro grupo tanto faz!
+	- Não faz diferença meu nome. Soh quero derrotar o chato do Sualk
+		Ozzy: KKKK ok, você é engraçado
+		set {OzzyRep} += 1
+	- Sou Fulado, prazer em conhecer
+		Ozzy: Se manca, cara
+elif {OzzyRep} == 1:
+	Ozzy: É, você até parece um cara legal, mas não quero conversar mais hoje
