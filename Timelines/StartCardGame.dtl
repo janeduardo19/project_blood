@@ -1,0 +1,8 @@
+join Sualk (Sualk_talking) left
+Sualk (Sualk_talking): Olá! Gostaria de começar a seção?
+- Claro, vamos lá!
+	Sualk (Sualk_talking): Então se prepare
+	[signal arg="start_card_game"]
+- Agora não, tenho mais o que fazer.
+	Sualk (Sualk_talking): Ok, quando estiver pronto é só falar comigo!
+[end_timeline]

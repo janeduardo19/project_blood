@@ -1,0 +1,13 @@
+[background arg="res://Assets/Backgrounds/black-background.png" fade="0.0"]
+Shade se encontra em seu quarto numa perspectiva aonde a porta do mesmo foi sobreposta por uma escuridão como a de um tunel
+[background arg="res://Assets/Backgrounds/cenario_5.jpg" fade="0.0"]
+ Fios, poeira e resquícios mórbidos flutuando pela atmosfera, ele olha suas mãos e só enxerga, na ponta dos seus dedos, uma especie de resina negra como o vazio do espaço.
+Sua visão embaçada e turva é consumida pela vontade de encontrar ela.\
+
+Shade: Onde eu estou..... grrr. Ahhh, Leyla? LEYLAAAAAA!!!!
+[background arg="res://Assets/Backgrounds/black-background.png" fade="0.0"]
+Tudo fica negro a partir de então. Inclusive seu próprio ser.
+[background arg="res://Assets/Backgrounds/cenario_4.png" fade="0.0"]
+Sualk (Sualk_hiden): Deixa comigo Winnie! Eu tenho um plano!
+join Sualk (Sualk_talking) center [animation="Slide In Left"]
+Eaw meus Queridos, Sejam bem Vindos a minha cidade de Por Um Tris!
