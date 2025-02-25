@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://depeawyh037yr"]
 
-[ext_resource type="Script" path="res://Scripts/Maps.gd" id="1_lw2b4"]
-[ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="1_x1aax"]
-[ext_resource type="Texture2D" uid="uid://dwc5up5dg48aq" path="res://Assets/Backgrounds/cenario_2.png" id="2_l81sy"]
-[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_ci6t1"]
-[ext_resource type="PackedScene" uid="uid://ddyu7bo86e5uw" path="res://Entities/NPC.tscn" id="5_ow5fd"]
-[ext_resource type="Texture2D" uid="uid://djvtdh0jbifn5" path="res://Assets/CardImages/Ozzy.png" id="6_qtrde"]
+[ext_resource type="Script" path="res://Scripts/Levels.gd" id="1_0c7ui"]
+[ext_resource type="Texture2D" uid="uid://dwc5up5dg48aq" path="res://Assets/Backgrounds/cenario_2.png" id="2_3dhvd"]
+[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_yw887"]
+[ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="4_fyax4"]
+[ext_resource type="PackedScene" uid="uid://ddyu7bo86e5uw" path="res://Entities/NPC.tscn" id="5_uxpjc"]
+[ext_resource type="Texture2D" uid="uid://djvtdh0jbifn5" path="res://Assets/CardImages/Ozzy.png" id="6_c1hkl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_58i54"]
 size = Vector2(256, 2494)
@@ -19,11 +19,11 @@ size = Vector2(259, 2502)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxnvb"]
 size = Vector2(3545, 237)
 
-[node name="Map1" type="Node2D"]
-script = ExtResource("1_lw2b4")
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_0c7ui")
 
 [node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("2_l81sy")
+texture = ExtResource("2_3dhvd")
 centered = false
 
 [node name="Borders" type="StaticBody2D" parent="."]
@@ -44,23 +44,23 @@ shape = SubResource("RectangleShape2D_k6clw")
 position = Vector2(1753.5, 2598.5)
 shape = SubResource("RectangleShape2D_cxnvb")
 
-[node name="Map3" parent="." instance=ExtResource("3_ci6t1")]
+[node name="Level3" parent="." instance=ExtResource("3_yw887")]
 
-[node name="Map2" parent="." instance=ExtResource("3_ci6t1")]
+[node name="Level2" parent="." instance=ExtResource("3_yw887")]
 position = Vector2(3409, 1365)
 
-[node name="Player" parent="." instance=ExtResource("1_x1aax")]
+[node name="Player" parent="." instance=ExtResource("4_fyax4")]
 z_index = 1
 position = Vector2(1640, 1208)
 
-[node name="Map2Pos" type="Marker2D" parent="."]
+[node name="Level2Pos" type="Marker2D" parent="."]
 position = Vector2(3235, 1366)
 
-[node name="Map3Pos" type="Marker2D" parent="."]
+[node name="Level3Pos" type="Marker2D" parent="."]
 position = Vector2(277, 1361)
 
-[node name="Ozzy" parent="." instance=ExtResource("5_ow5fd")]
+[node name="Ozzy" parent="." instance=ExtResource("5_uxpjc")]
 position = Vector2(1478, 706)
 npc_name = "Ozzy"
 dialogic_timeline = "OzzyPresentation"
-npc_texture = ExtResource("6_qtrde")
+npc_texture = ExtResource("6_c1hkl")

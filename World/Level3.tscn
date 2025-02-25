@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bxhf6tralnjo2"]
 
-[ext_resource type="Script" path="res://Scripts/Maps.gd" id="1_7gwdn"]
+[ext_resource type="Script" path="res://Scripts/Levels.gd" id="1_7gwdn"]
 [ext_resource type="Texture2D" uid="uid://dhk4i3rlq307f" path="res://Assets/Backgrounds/cenario_1.png" id="1_mnnki"]
 [ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="2_p5xsp"]
 [ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_tj4wp"]
@@ -19,7 +19,7 @@ size = Vector2(316, 2470)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wur57"]
 size = Vector2(3860, 267.75)
 
-[node name="Map3" type="Node2D"]
+[node name="Level3" type="Node2D"]
 script = ExtResource("1_7gwdn")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -44,19 +44,8 @@ shape = SubResource("RectangleShape2D_k4kbg")
 position = Vector2(1889, 2533.88)
 shape = SubResource("RectangleShape2D_wur57")
 
-[node name="Map1" parent="." instance=ExtResource("3_tj4wp")]
+[node name="Level1" parent="." instance=ExtResource("3_tj4wp")]
 position = Vector2(3689, 1268)
-
-[node name="Board" parent="." instance=ExtResource("3_tj4wp")]
-position = Vector2(4640, 617)
-
-[node name="CollisionShape2D" parent="Board" index="0"]
-position = Vector2(2, 4)
-
-[node name="Sprite2D" parent="Board" index="1"]
-position = Vector2(-6.00003, -20)
-scale = Vector2(0.132568, 0.125488)
-texture = ExtResource("3_whpmn")
 
 [node name="Sualk" parent="." instance=ExtResource("6_t11nj")]
 position = Vector2(2011, 1253)
@@ -69,5 +58,3 @@ position = Vector2(2038, 1591)
 
 [node name="Map1Pos" type="Marker2D" parent="."]
 position = Vector2(3534, 1271)
-
-[editable path="Board"]

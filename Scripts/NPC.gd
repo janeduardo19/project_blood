@@ -5,7 +5,6 @@ class_name NPC
 
 @export var npc_name: String = "NPC"
 @export var dialogic_timeline: String = "default_timeline"
-@export var interaction_range: float = 50.0
 @export var npc_texture: Texture2D 
 @onready var sprite: Sprite2D = $Sprite2D
 
@@ -37,11 +36,13 @@ func _on_can_interact(is_interactable: bool):
 
 func _on_interaction_area_body_entered(body):
 	# Verifique se o corpo que entrou na área é o jogador
-	emit_signal("can_interact", true)
+	if body.is_in_group("player"):
+		emit_signal("can_interact", true)
 
 func _on_interaction_area_body_exited(body):
 	# Verifique se o corpo que saiu da área é o jogador
-	emit_signal("can_interact", false)
+	if body.is_in_group("player"):
+		emit_signal("can_interact", false)
 
 
 func dialogic_signal(argument:String):
