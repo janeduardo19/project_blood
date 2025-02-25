@@ -56,5 +56,5 @@ npc_texture = ExtResource("3_whpmn")
 [node name="Player" parent="." instance=ExtResource("2_p5xsp")]
 position = Vector2(2038, 1591)
 
-[node name="Map1Pos" type="Marker2D" parent="."]
+[node name="Level1Pos" type="Marker2D" parent="."]
 position = Vector2(3534, 1271)
