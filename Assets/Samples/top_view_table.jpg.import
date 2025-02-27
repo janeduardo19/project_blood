@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cybv1rffaspe"
-path="res://.godot/imported/Cancelar.jpg-4b0625adcc18f3b2a9d8789c827fb48b.ctex"
+uid="uid://20ca42wlatc3"
+path="res://.godot/imported/top_view_table.jpg-c10ce80a4810be20e75e2dff050eb456.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cancelar.jpg"
-dest_files=["res://.godot/imported/Cancelar.jpg-4b0625adcc18f3b2a9d8789c827fb48b.ctex"]
+source_file="res://Assets/Samples/top_view_table.jpg"
+dest_files=["res://.godot/imported/top_view_table.jpg-c10ce80a4810be20e75e2dff050eb456.ctex"]
 
 [params]
 

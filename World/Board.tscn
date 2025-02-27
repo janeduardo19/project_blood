@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://cw4gfeh6a6q"]
+[gd_scene load_steps=20 format=3 uid="uid://cw4gfeh6a6q"]
 
 [ext_resource type="Script" path="res://Scripts/CameraManager.gd" id="1_bc8oj"]
-[ext_resource type="Texture2D" uid="uid://20ca42wlatc3" path="res://Assets/top_view_table.jpg" id="2_2fkrx"]
+[ext_resource type="Script" path="res://Scripts/Board.gd" id="1_tlai2"]
+[ext_resource type="Texture2D" uid="uid://20ca42wlatc3" path="res://Assets/Samples/top_view_table.jpg" id="2_2fkrx"]
 [ext_resource type="Texture2D" uid="uid://dhk4i3rlq307f" path="res://Assets/Backgrounds/cenario_1.png" id="3_gwk03"]
 [ext_resource type="Texture2D" uid="uid://yougp415h2wo" path="res://Assets/CardImages/Sualk.png" id="4_pp5sr"]
 [ext_resource type="Script" path="res://Scripts/CardManager.gd" id="5_bujgw"]
@@ -16,11 +17,13 @@
 [ext_resource type="Script" path="res://Scripts/EnemyDeck.gd" id="14_y5boj"]
 [ext_resource type="Texture2D" uid="uid://lj5jc72lxd00" path="res://Assets/CardLayout/card_back_purple.png" id="15_ppwgt"]
 [ext_resource type="Script" path="res://Scripts/BattleManager.gd" id="16_eqcbv"]
+[ext_resource type="Texture2D" uid="uid://ce6uq55hpok2l" path="res://Assets/Samples/CardSlot.png" id="17_j55us"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18f6k"]
 size = Vector2(1413.33, 2006.67)
 
 [node name="Board" type="Node2D"]
+script = ExtResource("1_tlai2")
 
 [node name="CameraManager" type="Node2D" parent="."]
 script = ExtResource("1_bc8oj")
@@ -209,5 +212,35 @@ text = "0"
 script = ExtResource("16_eqcbv")
 
 [node name="BattleTimer" type="Timer" parent="."]
+
+[node name="PlayerHealth" type="RichTextLabel" parent="."]
+offset_left = 130.0
+offset_top = 430.0
+offset_right = 170.0
+offset_bottom = 470.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="EnemyHealth" type="RichTextLabel" parent="."]
+offset_left = 130.0
+offset_top = 230.0
+offset_right = 170.0
+offset_bottom = 270.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="PlayerDiscard" type="Node2D" parent="."]
+position = Vector2(1000, 450)
+scale = Vector2(0.45, 0.45)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerDiscard"]
+texture = ExtResource("17_j55us")
+
+[node name="EnemyDiscard" type="Node2D" parent="."]
+position = Vector2(280, 180)
+scale = Vector2(0.45, 0.45)
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyDiscard"]
+texture = ExtResource("17_j55us")
 
 [connection signal="pressed" from="EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]

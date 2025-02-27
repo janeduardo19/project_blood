@@ -45,8 +45,10 @@ func draw_card():
 	var card_color_path = str("res://Assets/CardLayout/" + str(CARD_DATABASE.CARDS[card_drawn_name][0]) + ".png")
 	new_card.get_node("CardImage").texture = load(card_image_path)
 	new_card.get_node("CardColor").texture = load(card_color_path)
-	new_card.get_node("Attack").text = str(CARD_DATABASE.CARDS[card_drawn_name][1])
-	new_card.get_node("Health").text = str(CARD_DATABASE.CARDS[card_drawn_name][2])
+	new_card.attack = CARD_DATABASE.CARDS[card_drawn_name][1]
+	new_card.get_node("Attack").text = str(new_card.attack)
+	new_card.health = CARD_DATABASE.CARDS[card_drawn_name][2]
+	new_card.get_node("Health").text = str(new_card.health)
 	new_card.card_type = CARD_DATABASE.CARDS[card_drawn_name][3]
 	card_manager.add_child(new_card)
 	new_card.name = "Card"

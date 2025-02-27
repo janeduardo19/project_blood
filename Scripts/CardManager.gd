@@ -54,12 +54,13 @@ func finish_drag():
 				card_being_dragged.scale = Vector2(CARD_SMALLER_SCALE, CARD_SMALLER_SCALE)
 				card_being_dragged.z_index = -1
 				is_hovering_on_card = false
-				card_being_dragged.card_is_in_card_slot = card_slot_found
+				card_being_dragged.card_slot_card_is_in = card_slot_found
 				player_hand.remove_card_from_hand(card_being_dragged)
 				# Card drooped in card slot
 				card_being_dragged.position = card_slot_found.position
 				card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 				card_slot_found.card_in_slot = true
+				$"../BattleManager".player_cards_on_battlefield.append(card_being_dragged)
 				card_being_dragged = null
 				return
 	player_hand.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
@@ -84,7 +85,7 @@ func on_hovered_over_card(card):
 
 func on_hovered_off_card(card):
 	# Check if card is NOT in a card slot AND NOT being dragged
-	if !card.card_is_in_card_slot && !card_being_dragged:
+	if !card.card_slot_card_is_in && !card_being_dragged:
 		# If not dragging
 		highlight_card(card, false)
 		# Check if hovered off card straight on to another card

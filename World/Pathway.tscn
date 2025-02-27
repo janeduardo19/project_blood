@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cff78xra7xfcq"]
 
-[ext_resource type="Texture2D" uid="uid://b75djuoclibc5" path="res://Assets/portal.jpg" id="1_l54x3"]
+[ext_resource type="Texture2D" uid="uid://b75djuoclibc5" path="res://Assets/Samples/portal.jpg" id="1_l54x3"]
 [ext_resource type="Script" path="res://Scripts/Pathway.gd" id="1_mqhfh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o33fo"]
