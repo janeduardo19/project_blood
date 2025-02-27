@@ -10,6 +10,7 @@ signal  left_mouse_button_released
 
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_DECK = 4
+const COLLISION_MASK_ENEMY_CARD = 8
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -40,11 +41,15 @@ func raycast_at_cursor():
 		if result_collision_mask == COLLISION_MASK_CARD:
 			var card_found = get_card_with_highest_z_index(result)
 			if card_found:
-				card_manager.start_drag(card_found)
+				card_manager.card_clicked(card_found)
 		elif result_collision_mask == COLLISION_MASK_DECK:
 			# Deck clicked
 			deck.draw_card()
-			
+		elif result_collision_mask == COLLISION_MASK_ENEMY_CARD:
+			$"../BattleManager".enemy_card_selected(result[0].collider.get_parent())
+
+
+
 func get_card_with_highest_z_index(cards):
 	# Assume the first card in cards array has the hightest z index
 	var highest_z_card = cards[0].collider.get_parent()

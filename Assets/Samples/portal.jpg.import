@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://20ca42wlatc3"
-path="res://.godot/imported/top_view_table.jpg-f7298b1ec330a7547d200e612c6ba039.ctex"
+uid="uid://b75djuoclibc5"
+path="res://.godot/imported/portal.jpg-3fff5be090ee18f2e58bd62a2c7e4b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/top_view_table.jpg"
-dest_files=["res://.godot/imported/top_view_table.jpg-f7298b1ec330a7547d200e612c6ba039.ctex"]
+source_file="res://Assets/Samples/portal.jpg"
+dest_files=["res://.godot/imported/portal.jpg-3fff5be090ee18f2e58bd62a2c7e4b93.ctex"]
 
 [params]
 
