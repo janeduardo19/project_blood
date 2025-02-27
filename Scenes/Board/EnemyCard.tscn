@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ct17fnwhijaij"]
+[gd_scene load_steps=10 format=3 uid="uid://ct17fnwhijaij"]
 
 [ext_resource type="Script" path="res://Scripts/EnemyCard.gd" id="1_7cefl"]
 [ext_resource type="Texture2D" uid="uid://lj5jc72lxd00" path="res://Assets/CardLayout/card_back_purple.png" id="1_urg4b"]
@@ -380,6 +380,9 @@ _data = {
 "card_flip": SubResource("Animation_pb05a")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ynac"]
+size = Vector2(1414.29, 2000)
+
 [node name="EnemyCard" type="Node2D"]
 position = Vector2(1200, 100)
 scale = Vector2(0.07, 0.07)
@@ -430,3 +433,11 @@ scroll_active = false
 libraries = {
 "": SubResource("AnimationLibrary_ob2qq")
 }
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(35.7109, 0)
+shape = SubResource("RectangleShape2D_7ynac")

@@ -10,8 +10,7 @@ const CARD_DATABASE = preload("res://Scripts/CardDatabase.gd")
 const CARD_SCENE_PATH = "res://Scenes/Board/EnemyCard.tscn"
 const STARTING_HAND_SIZE = 5
 
-var enemy_deck = ["Erika", "Nixy", "Sualk", "Ozzy", "Nixy", "Sualk", "Erika", "Nixy", "Sualk", "Ozzy", "Nixy", "Sualk"]
-
+var enemy_deck = ["Ozzy", "Nixy", "Ozzy", "Nixy", "Erika", "Sualk"]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,6 +34,7 @@ func draw_card():
 	var new_card = card_scene.instantiate()
 	var card_image_path = str("res://Assets/CardImages/" + card_drawn_name + ".png")
 	var card_color_path = str("res://Assets/CardLayout/" + str(CARD_DATABASE.CARDS[card_drawn_name][0]) + ".png")
+	new_card.card_name = card_drawn_name
 	new_card.get_node("CardImage").texture = load(card_image_path)
 	new_card.get_node("CardColor").texture = load(card_color_path)
 	new_card.attack = CARD_DATABASE.CARDS[card_drawn_name][1]
