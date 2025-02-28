@@ -32,6 +32,10 @@ func generate_map() -> Array[Array]:
 		for i in FLOORS - 1:
 			current_j = _setup_connections(i, current_j)
 	
+	_setup_boss_room()
+	_setup_random_room_weights()
+	_setup_room_types()
+	
 	var i := 0
 	for floor in map_data:
 		print("floor %s" %i)
@@ -41,7 +45,7 @@ func generate_map() -> Array[Array]:
 		print(used_rooms)
 		i += 1
 	
-	return []
+	return map_data
 
 
 func _generate_initial_grid() -> Array[Array]:
@@ -124,3 +128,28 @@ func _would_cross_existing_path(i: int, j:int, room: Room) -> bool:
 				return true
 				
 	return false
+
+
+func _setup_boss_room() -> void:
+	var middle := floori(MAP_WIDTH * 0.5)
+	var boss_room := map_data[FLOORS - 1][middle] as Room
+	
+	for j in MAP_WIDTH:
+		var current_room = map_data[FLOORS - 2][j] as Room
+		if current_room.next_rooms:
+			current_room.next_rooms = [] as Array[Room]
+			current_room.next_rooms.append(boss_room)
+	
+	boss_room.type = Room.Type.BOSS
+
+
+func _setup_random_room_weights() -> void:
+	random_room_type_weights[Room.Type.MONSTER] = MONSTER_ROOM_WEIGHT
+	random_room_type_weights[Room.Type.CAMPFIRE] = MONSTER_ROOM_WEIGHT + CAMPFIRE_ROOM_WEIGHT
+	random_room_type_weights[Room.Type.SHOP] = MONSTER_ROOM_WEIGHT + CAMPFIRE_ROOM_WEIGHT + SHOP_ROOM_WEIGHT
+	
+	random_room_type_total_weight = random_room_type_weights[Room.Type.SHOP]
+
+
+func _setup_room_types() -> void:
+	pass
