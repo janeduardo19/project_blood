@@ -40,8 +40,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if player_health <= 0 or enemy_health <=0:
-		get_tree().change_scene_to_file("res://World/Level3.tscn")
+	if enemy_health <= 0:
+		get_tree().change_scene_to_file("res://Scenes/World/Level3.tscn")
 
 
 func _on_end_turn_button_pressed() -> void:

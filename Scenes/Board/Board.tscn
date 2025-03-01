@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://cw4gfeh6a6q"]
 
 [ext_resource type="Script" path="res://Scripts/CameraManager.gd" id="1_bc8oj"]
-[ext_resource type="Script" path="res://Scripts/Board.gd" id="1_tlai2"]
+[ext_resource type="Script" path="res://Scenes/Board/board.gd" id="1_tlai2"]
 [ext_resource type="Texture2D" uid="uid://20ca42wlatc3" path="res://Assets/Samples/top_view_table.jpg" id="2_2fkrx"]
 [ext_resource type="Texture2D" uid="uid://dhk4i3rlq307f" path="res://Assets/Backgrounds/cenario_1.png" id="3_gwk03"]
 [ext_resource type="Texture2D" uid="uid://yougp415h2wo" path="res://Assets/CardImages/Sualk.png" id="4_pp5sr"]

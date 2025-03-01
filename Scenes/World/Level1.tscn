@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://depeawyh037yr"]
 
-[ext_resource type="Script" path="res://Scripts/Levels.gd" id="1_0c7ui"]
+[ext_resource type="Script" path="res://Scenes/World/levels.gd" id="1_0c7ui"]
 [ext_resource type="Texture2D" uid="uid://dwc5up5dg48aq" path="res://Assets/Backgrounds/cenario_2.png" id="2_3dhvd"]
-[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_yw887"]
+[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://Scenes/World/Pathway.tscn" id="3_yw887"]
 [ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="4_fyax4"]
 [ext_resource type="PackedScene" uid="uid://ddyu7bo86e5uw" path="res://Entities/NPC.tscn" id="5_uxpjc"]
 [ext_resource type="Texture2D" uid="uid://djvtdh0jbifn5" path="res://Assets/CardImages/Ozzy.png" id="6_c1hkl"]

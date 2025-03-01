@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://c10xkh2p0do28"]
 
 [ext_resource type="Texture2D" uid="uid://bet221e1w5emw" path="res://Assets/Backgrounds/cenario_4.png" id="1_okreo"]
-[ext_resource type="Script" path="res://Scripts/Levels.gd" id="1_r7hrg"]
+[ext_resource type="Script" path="res://Scenes/World/levels.gd" id="1_r7hrg"]
 [ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="2_nikih"]
-[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_8wbcg"]
+[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://Scenes/World/Pathway.tscn" id="3_8wbcg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amrst"]
 size = Vector2(309, 2184)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://bxhf6tralnjo2"]
 
-[ext_resource type="Script" path="res://Scripts/Levels.gd" id="1_7gwdn"]
+[ext_resource type="Script" path="res://Scenes/World/levels.gd" id="1_7gwdn"]
 [ext_resource type="Texture2D" uid="uid://dhk4i3rlq307f" path="res://Assets/Backgrounds/cenario_1.png" id="1_mnnki"]
 [ext_resource type="PackedScene" uid="uid://bghjl2bka8hn0" path="res://Entities/Player.tscn" id="2_p5xsp"]
-[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://World/Pathway.tscn" id="3_tj4wp"]
+[ext_resource type="PackedScene" uid="uid://cff78xra7xfcq" path="res://Scenes/World/Pathway.tscn" id="3_tj4wp"]
 [ext_resource type="Texture2D" uid="uid://yougp415h2wo" path="res://Assets/CardImages/Sualk.png" id="3_whpmn"]
 [ext_resource type="PackedScene" uid="uid://ddyu7bo86e5uw" path="res://Entities/NPC.tscn" id="6_t11nj"]
 
