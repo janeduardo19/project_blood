@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="project_blood"
-run/main_scene="res://World/Level1.tscn"
+run/main_scene="res://Scenes/World/Level1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
+Global="*res://Global/Global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Events="*res://Global/Events.gd"
 
 [dialogic]
 

@@ -17,4 +17,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 func change_map():
 	Global.from_world = get_parent().name
-	get_tree().change_scene_to_file("res://World/" + name + ".tscn")
+	get_tree().change_scene_to_file("res://Scenes/World/" + name + ".tscn")

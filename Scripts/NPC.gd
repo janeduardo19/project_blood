@@ -48,5 +48,5 @@ func _on_interaction_area_body_exited(body):
 func dialogic_signal(argument:String):
 	if argument == "start_card_game":
 		print("Sinal 'start_card_game' recebido")
-		get_tree().change_scene_to_file("res://World/Board.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Board/Board.tscn")
 		
