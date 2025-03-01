@@ -1,14 +1,14 @@
 [gd_scene load_steps=20 format=3 uid="uid://cw4gfeh6a6q"]
 
 [ext_resource type="Script" path="res://Scripts/CameraManager.gd" id="1_bc8oj"]
-[ext_resource type="Script" path="res://Scenes/Board/board.gd" id="1_tlai2"]
+[ext_resource type="Script" path="res://Scenes/Battle/battle.gd" id="1_tlai2"]
 [ext_resource type="Texture2D" uid="uid://20ca42wlatc3" path="res://Assets/Samples/top_view_table.jpg" id="2_2fkrx"]
 [ext_resource type="Texture2D" uid="uid://dhk4i3rlq307f" path="res://Assets/Backgrounds/cenario_1.png" id="3_gwk03"]
 [ext_resource type="Texture2D" uid="uid://yougp415h2wo" path="res://Assets/CardImages/Sualk.png" id="4_pp5sr"]
 [ext_resource type="Script" path="res://Scripts/CardManager.gd" id="5_bujgw"]
-[ext_resource type="PackedScene" uid="uid://dewe1dk4fgioe" path="res://Scenes/Board/CardSlot.tscn" id="6_4qhqi"]
+[ext_resource type="PackedScene" uid="uid://dewe1dk4fgioe" path="res://Scenes/Battle/CardSlot.tscn" id="6_4qhqi"]
 [ext_resource type="Script" path="res://Scripts/MagicCardSlot.gd" id="7_wn7ux"]
-[ext_resource type="PackedScene" uid="uid://dcdo0hrqm40go" path="res://Scenes/Board/EnemyCardSlot.tscn" id="8_joibb"]
+[ext_resource type="PackedScene" uid="uid://dcdo0hrqm40go" path="res://Scenes/Battle/EnemyCardSlot.tscn" id="8_joibb"]
 [ext_resource type="Script" path="res://Scripts/PlayerHand.gd" id="9_qj2x8"]
 [ext_resource type="Script" path="res://Scripts/EnemyHand.gd" id="10_4bsbc"]
 [ext_resource type="Script" path="res://Scripts/Deck.gd" id="11_isoi2"]
@@ -214,17 +214,17 @@ script = ExtResource("16_eqcbv")
 [node name="BattleTimer" type="Timer" parent="."]
 
 [node name="PlayerHealth" type="RichTextLabel" parent="."]
-offset_left = 130.0
+offset_left = 170.0
 offset_top = 430.0
-offset_right = 170.0
+offset_right = 210.0
 offset_bottom = 470.0
 scale = Vector2(2, 2)
 text = "0"
 
 [node name="EnemyHealth" type="RichTextLabel" parent="."]
-offset_left = 130.0
+offset_left = 170.0
 offset_top = 230.0
-offset_right = 170.0
+offset_right = 210.0
 offset_bottom = 270.0
 scale = Vector2(2, 2)
 text = "0"

@@ -8,7 +8,7 @@ extends Node2D
 
 const CARD_DRAWN_SPEED = 0.2
 const CARD_DATABASE = preload("res://Scripts/CardDatabase.gd")
-const CARD_SCENE_PATH = "res://Scenes/Board/Card.tscn"
+const CARD_SCENE_PATH = "res://Scenes/Battle/Card.tscn"
 const STARTING_HAND_SIZE = 5
 
 var player_deck = ["Erika", "Nixy", "Sualk", "Ozzy", "Nixy", "Sualk", "Erika", "Nixy", "Sualk", "Ozzy", "Nixy", "Sualk"]

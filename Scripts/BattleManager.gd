@@ -41,7 +41,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if enemy_health <= 0:
-		get_tree().change_scene_to_file("res://Scenes/World/Level3.tscn")
+		Events.battle_won.emit()
 
 
 func _on_end_turn_button_pressed() -> void:
@@ -86,7 +86,6 @@ func opponent_turn():
 func play_card():
 	# Check if there is card to play
 	enemy_hand.enemy_cards
-	print("Tamanho da mao: ", enemy_hand.enemy_cards.size())
 	if enemy_hand.enemy_cards.size() == 0:
 		end_opponent_turn()
 		return
@@ -99,10 +98,8 @@ func play_card():
 	# Assume the first card has the highest atk
 	var card_with_highest_atk = enemy_hand.enemy_cards[0]
 	for card in enemy_hand.enemy_cards:
-		print("Cartas Na mao: ",card.card_name)
 		if card.attack > card_with_highest_atk.attack:
 			card_with_highest_atk = card
-	print("Card With Hightest attack: ", card_with_highest_atk.card_name)
 	
 	var tween = get_tree().create_tween()
 	tween.tween_property(card_with_highest_atk, "position", random_empty_monster_card_slot.position, CARD_MOVE_SPEED)
