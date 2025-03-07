@@ -12,6 +12,7 @@ gradient = SubResource("Gradient_1vf4e")
 width = 50
 
 [node name="Map" type="Node2D"]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_13p5m")
 
 [node name="Visuals" type="Node2D" parent="."]
