@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="project_blood"
-run/main_scene="res://Scenes/World/Level1.tscn"
+run/main_scene="res://Scenes/Run/Run.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [autoload]
@@ -128,6 +128,13 @@ left_mouse={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(159, 23),"global_position":Vector2(168, 69),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_render/layer_1="card_target_selector"
+2d_render/layer_2="card_drop_area"
+2d_physics/layer_1="card_target_selector"
+2d_physics/layer_2="card_drop_area"
 
 [rendering]
 

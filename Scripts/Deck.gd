@@ -8,7 +8,7 @@ extends Node2D
 
 const CARD_DRAWN_SPEED = 0.2
 const CARD_DATABASE = preload("res://Scripts/CardDatabase.gd")
-const CARD_SCENE_PATH = "res://Scenes/Battle/Card.tscn"
+const CARD_SCENE_PATH = "res://Scenes/CardUI/CardUI.tscn"
 const STARTING_HAND_SIZE = 5
 
 var player_deck = ["Erika", "Nixy", "Sualk", "Ozzy", "Nixy", "Sualk", "Erika", "Nixy", "Sualk", "Ozzy", "Nixy", "Sualk"]
@@ -44,17 +44,16 @@ func draw_card():
 	var card_image_path = str("res://Assets/CardImages/" + card_drawn_name + ".png")
 	var card_color_path = str("res://Assets/CardLayout/" + str(CARD_DATABASE.CARDS[card_drawn_name][0]) + ".png")
 	new_card.card_name = card_drawn_name
-	new_card.get_node("CardImage").texture = load(card_image_path)
-	new_card.get_node("CardColor").texture = load(card_color_path)
+	new_card.get_node("CardImages/CardImage").texture = load(card_image_path)
+	new_card.get_node("CardImages/CardColor").texture = load(card_color_path)
 	new_card.attack = CARD_DATABASE.CARDS[card_drawn_name][1]
-	new_card.get_node("Attack").text = str(new_card.attack)
+	new_card.get_node("CardTexts/Attack").text = str(new_card.attack)
 	new_card.health = CARD_DATABASE.CARDS[card_drawn_name][2]
-	new_card.get_node("Health").text = str(new_card.health)
+	new_card.get_node("CardTexts/Health").text = str(new_card.health)
 	new_card.card_type = CARD_DATABASE.CARDS[card_drawn_name][3]
 	card_manager.add_child(new_card)
 	new_card.name = "Card"
 	player_hand.add_card_to_hand(new_card, CARD_DRAWN_SPEED)
-	new_card.get_node("AnimationPlayer").play("card_flip")
 
 
 func reset_draw():

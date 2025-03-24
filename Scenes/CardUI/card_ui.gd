@@ -1,8 +1,14 @@
-extends Node2D
+class_name CardUI
+extends Control
 
-
+signal reparent_requested(which_card_ui: CardUI)
 signal hovered
 signal hovered_off
+
+
+@onready var color_rect: ColorRect = $ColorRect
+@onready var label: Label = $Label
+
 
 var starting_position
 var card_slot_card_is_in
@@ -15,7 +21,8 @@ var defeated = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# All cards must be child of CardManager or this will error
-	get_parent().connect_card_signals(self)
+	var card_manager = CardManager.new()
+	card_manager.connect_card_signals(self)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -3,7 +3,7 @@ extends Node
 
 const X_DIST := 120
 const Y_DIST := 85
-const PLACEMENT_RANDOMNESS := 5
+const PLACEMENT_RANDOMNESS := 40
 const FLOORS := 15
 const MAP_WIDTH := 7
 const PATHS := 6
